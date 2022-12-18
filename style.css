@@ -33,6 +33,7 @@ html, body{
     margin: 0 auto;
     padding-left: 0px;
     padding-right: 2px;
+    padding-top: 8px;
 
 }
 
@@ -42,13 +43,16 @@ html, body{
     margin-top: 20px;
     cursor: pointer;
 }
-.menu-navegacao{
+nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: nowrap;
     align-items: center;
     font-weight: 700px;
     margin-top: 3px;
+    width: 600px;
+    height: 50px;
    
 }
 #fotoperfil{
@@ -65,7 +69,7 @@ html, body{
     margin-right: 17px;
 }
 
-.menu-navegacao a{
+nav a{
     margin-left: 35px;
     color: #fff;
     text-decoration: none;
@@ -74,11 +78,11 @@ html, body{
     font-weight: 700;
 }
 
-.menu-navegacao a:hover{
+nav a:hover{
     color:#1ed760;
 }
 
-.menu-navegacao span{
+nav span{
     margin-left: 15px;
     color: #fff;
     text-decoration: none;
@@ -88,7 +92,7 @@ html, body{
     cursor: pointer;
 }
 
-.menu-navegacao span:hover{
+nav span:hover{
     color:#1ed760;
 }
 hr{
@@ -469,9 +473,8 @@ hr{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-   
-
 }
+
 .footer-top{
     display: flex;
     flex-direction: row;
@@ -479,11 +482,19 @@ hr{
     justify-content: space-between;
     margin-top: 100px;
 }
+
 #logospotify1{
     width: 131.48px;
     height: 39.42px;   
     cursor: pointer;
     margin-left: 40px;
+}
+
+.container-lista{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+
 }
 .footer-top ul{
     font-size: 1.2rem;
@@ -507,7 +518,6 @@ hr{
     display: flex;
     flex-direction: row;
     margin-left: 60px;
-
 }
 .social img{
     width: 54px;
@@ -527,16 +537,21 @@ hr{
     justify-content: space-between;
     font-size: 1.2rem;
     margin-top: 64px;
-
-
 }
 
 .left-bot{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 30px;
     margin-left: 35px;
     margin-top: 45px;
+}
+
+.left-bot ul{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 }
 .right1{
     display: flex;
@@ -565,16 +580,30 @@ hr{
 
 
 @media (max-width: 1199px){
+
+    .header-content{
+    max-width: 800px;
+    margin-left: 50px;
+
+    }
+
     .section1-container{
         height: 810px;
     }
    .section1-content{
     display: flex;
     flex-direction: column;
+    max-width: 800px;
+    margin: 0 50px;
    }
    .right{
     display:flex;
     align-self: center;
+   }
+
+   .section2-content{
+    max-width: 800px;
+    margin: 0 50px;
    }
    .cds{
     display: grid;
@@ -594,38 +623,60 @@ hr{
        .capa-texto p{
         text-align:left;
        }
+
+       .capa-texto h3{
+        text-align: left;
+       }
        .section2-content{
         height: 750px;
        }
 
+       .section3-content{
+        max-width: 800px;
+        margin: 50px 50px;
+        height: 500px;
+       }
+
        .premium-container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        row-gap: 100px;
+        column-gap: 70px;
+        margin-left: 50px;
+
         }
         .premium{
             display: flex;
             flex-direction: row;
             
         }
+
+        .premium img{
+            width: 100px;
+            height: 100px;
+        }
+
         .premium1{
             margin-left: 20px;
+         }
+
+         .premium1 h3, p{
+            text-align: start;
+
          }
 
          .bandeiras{
             margin-bottom: 55px;
          }
          .section4-content{
-            height: 2400px;
+            height: 2300px;
          }
 
          .cards-container{
             display: grid;
             grid-template-columns: 1fr;
-            justify-items: center;
+            justify-items: center;           
             
-            
-
          }
          .cards{
             width: 400px;
@@ -633,42 +684,73 @@ hr{
             margin-top: 5px;
         }
 
-       .cards button  {
-        width: 370px;
+        .cards button  {
+            width: 370px;
         
-       }
+        }
        
-#card1 button{
-    margin-top: 20px;
-}
+        #card1 button{
+            margin-top: 20px;
+        }
 
-#card2 button{
-    margin-top: 20px;
-}
+        #card2 button{
+            margin-top: 20px;
+        }
 
-#card3 button{
-    margin-top: 20px;
-}
+        #card3 button{
+            margin-top: 20px;
+        }
 
-#card4 hr{
-    margin-top: 20px ;
-}
-#card4 button{
-    margin-top: 20px;
-}
-#segundalinha{
-    width: 375px;
-}
-.cards-titulo{
-    display: flex;
-    flex-direction: row;
-}
+        #card4 hr{
+            margin-top: 20px ;
+        }
+        #card4 button{
+            margin-top: 20px;
+        }
+        #segundalinha{
+            width: 375px;
+        }
+        .cards-titulo{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
 
-.cards-titulo h5{
-    margin-top: 0;
-    margin-left: 5px;
-}
+        .cards-titulo h5{
+            margin-top: 0;
+            margin-left: 5px;
+        }
 
+        .footer-content{
+            max-width: 800px;
+            margin: 0 50px;
+        }
+        .container-lista{
+           flex-direction: row;
+            gap: 20px;
+        }
+
+        .container-lista li{
+            font-size: 1.4rem;
+        }
+
+        .container-imagen{
+            display: flex;
+            margin-right: 25px;
+            margin-left: 5px;
+        }
+
+        #logospotify1{
+            margin: 0;
+        }
+        .social{
+            margin-left: 10px;
+        }
+
+        .social img{
+            width: 45px;
+            height: 45px;
+        }
 
 
 
@@ -676,65 +758,416 @@ hr{
 
 @media (max-width: 992px){
 
-    .header-content{
 
+    .header-container{
+        height: 60px;
+    }
+    
+    .header-content{            
         height: 54px;
     }
     .section1-container{
         height: 730px ;
     }
+    .footer-content{
+        height: 635px;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: flex-start;
+    }
 
     #logospotify{
         width: 89px;
         height: 28px;
+        margin: 10px 0px 10px 50px;
         }
-
+    .right{
+        margin-top: 0;
+    }
     .right img{
         width: 320px;
         height: 320px;
+       
+    }
+
+    .left{
+        
+        max-width: 700px;
+        margin: 30px 50px;
+    }
+
+    .section2-content{
+        max-width: 700px;
+        height: 1100px;
+    }
+
+    .cds{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+
+    .capa-texto h3, p{
+        text-align: start;
+        font-size: 2.2rem;
+        margin-left: 10px;
+    }
+
+    .section3-content{
+        height: 450px;
+    }
+    .premium-container{
+
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        row-gap: 100px;
+        column-gap: 10px;
+        margin-left: 50px;
+        
 
     }
 
+    .premium img{
+
+        width: 82px;
+        height: 82px;
+
+    }
+
+    .premium1{
+        margin: 10px;
+        height: 100px;
+    }
+
+    .premium1 h3{
+
+        font-size: 1.6rem;
+        text-align: start;
+
+    }
+
+    .premium1 p{
+        margin: 0;
+        font-size: 1.4rem;
+        text-align: start;
+    }
+
+
+    .section4-content{
+        height:2600px
+    }
 
     .footer-content{
-        height: 565px;
+        max-width: 700px;
+        margin-left: 70px;
+        height: 600px;
     }
     .footer-top{
-        position: relative;
-        display: flex;
-        justify-content: space-evenly;
+       display: grid;
+       margin: 20px 50px 0 50px;
+       max-width: 700px;
+        
     }
 
-    .container-list{
-        display: flex;
-        flex-direction: row;
+
+    .container-lista{
+        margin-top: 50px;
+        gap: 20px;
+              
     }
 
-    .footer-top ul{
-        display: flex;
-        flex-direction: row;
+    .container-lista ul{
+        width: 200px;
+        
+    }
+
+    .container-social{
+
+      margin-top: 50px;  
+      margin-left: 0px;
     }
 
     .social{
-        position: relative;
-        left: -650px;
-        top: 300px;
+        margin-left: 10px;
     }
+
 
     .social img{
         width: 40px;
         height: 40px;
+        
     }
 
     #logospotify1{
         width: 89px;
         height: 28px;
-        position: relative;
-        top: -60px;
     }
 
     .footer-bot{
-        margin-top: 130px;
+       max-width: 700px;
+        margin: 40px 50px;
+        margin-left: 20px;
     }
+    .left-bot{
+        margin-left: 30px;
+       
+    }
+
+    .left-bot ul{
+        gap: 10px;
+    }
+
+
+}
+
+@media (max-width: 768px){
+    
+
+    .header-content{
+        margin: 0;  
+    }
+    
+    nav{
+        display: none;
+    }
+    .section1-container{
+        height: 1000px;
+    }
+
+    .section1-content{
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+ 
+    }
+
+    .right img{
+        padding: 0;
+        margin: 0;
+    }
+    .left{
+      display: flex;
+      align-self: center;
+      justify-self: center;  
+    }
+    .capa-texto h3{
+        text-align: start;
+    }
+
+    .btn{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    #btn1{
+        margin-bottom:  20px;
+        width: 400px;
+    }
+    #btn2{
+        width: 400px;
+    }
+    .section2-content{
+        height: 1150px;
+        margin: 0 auto;
+    }
+
+    .section2-content h2, p{
+        margin: 40px 0;
+        font-size: 3.0rem;
+    }
+    .cds{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .section3-content{
+
+        margin: 50px auto;
+
+        height: 600px;
+    }
+
+    .premium-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin: 30px auto;
+    }
+
+    .premium{
+        display: flex;
+        align-items: center;
+    }
+    .premium img{
+        margin-right: 20px;
+    }
+    .premium1{
+        vertical-align: middle;
+        height: 50px;
+    }
+    .premium1 h3, p{
+        text-align:start;
+        vertical-align:middle;
+        margin: 0;
+    }
+
+    .section4-content{
+        height: 2450px;
+    }
+
+    .cards-container{
+        font-size: 5px;
+    }
+
+
+    .footer-container{
+        height: 1056px;
+        
+
+    }
+
+    .footer-content{
+        margin: 0;
+    }
+
+
+    .footer-top{
+        margin: 0;
+    }
+
+    .cards p{
+        font-size: 1.6rem;
+    }
+
+    .container-imagen{
+        margin: 30px 20px
+    }
+
+    .container-lista{
+        display: flex;
+        flex-direction: column;
+        margin: 30px 20px;
+        gap: 60px;
+
+    }
+
+    .container-lista ul{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .footer-bot{
+        white-space: normal;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-top: 0px;
+        font-size: 1.0rem;
+        line-height: 1.2rem;
+        margin: 0;
+        width: auto;
+        gap: 80px;
+    }
+
+    .left-bot{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-left: 10px;
+        margin-bottom: 40px;
+        height: 40px;
+    }
+
+    .left-bot ul{
+        display: flex;
+        flex-wrap: wrap;
+               
+    }   
+
+    .right1{
+        align-items: flex-start;
+    }
+
+    .right1 p{
+        
+        font-size: 1.0rem;
+        text-align: start;
+    }
+}
+
+@media (max-width: 481px){
+
+    .left h2{
+        font-size: 2.4rem ;
+    }
+    .left h3{
+        font-size: 1.8rem;
+    }
+
+    #btn1{
+        width: 300px;
+    }
+
+    #btn2{
+        width: 300px;
+    }
+
+    .section2-content{
+        height: 1250px;
+    }
+
+    .capa-texto h3{
+        margin-left: 0;
+
+    }
+
+    .section4-container{
+        height: 2680px;
+    }
+
+    .section4-content h2{
+        margin-top: 30px;
+        font-size: 3.0rem;
+        text-align: center;
+        
+
+    }
+
+    .bandeiras{
+        margin-bottom: 30px;
+    }
+
+    .cards{
+        width: 300px;
+    }
+
+    .cards-titulo{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .cards-titulo h4 {
+        margin-left: 5px;
+    }
+
+    #segundalinha{
+        width: 270px;
+    }
+    .cards button{
+        width: 270px;
+
+    }
+    .textop p{
+        font-size: 1.2rem ;
+    }
+
+
 
 }
