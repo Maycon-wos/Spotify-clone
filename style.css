@@ -12,7 +12,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
+    html, body{
     font-family: spotify;
     font-size: 62.5%;
 }
@@ -151,6 +151,8 @@ hr{
 }
 #btn1:hover{
     background-color:#000000;
+    transform: scalex(1.08);
+    
 }
 
 
@@ -167,11 +169,12 @@ hr{
     align-content: center;
     align-self: center;
     cursor: pointer;
-    margin-left: 5px;
+    margin-left: 20px;
 }
 
 #btn2:hover{
     background-color: #AF096D;
+    transform: scalex(1.08);
 }
 .left p{
     margin-top: 50px;
@@ -434,6 +437,7 @@ hr{
     }
 .cards button:hover{
     background-color:#000000;
+    transform: scalex(1.08);
 }
 
 .textop p {
