@@ -1,6 +1,6 @@
 🎵 Spotify Clone
 
-Este projeto é uma recriação da interface visual do Spotify, desenvolvido com HTML, CSS e JavaScript, com foco em:
+Este projeto é uma recriação da interface visual do Spotify, desenvolvido com HTML, CSS, com foco em:
 
 Layout responsivo
 
@@ -14,7 +14,6 @@ HTML5 – Estruturação semântica
 
 CSS3 – Estilização avançada
 
-JavaScript – Interatividade básica
 
 🛠️ Funcionalidades
 
